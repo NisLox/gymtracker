@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Tracker from './tracker.js';
 
 function App() {
   return (
@@ -10,14 +11,7 @@ function App() {
         <p>
           Will Burgess
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gym Tracker
-        </a>
+        <Tracker />
       </header>
     </div>
   );
