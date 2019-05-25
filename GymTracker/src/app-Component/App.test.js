@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow } from 'enzyme';
-import Tracker from '../tracker.js';
+import Header from './header';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -19,7 +19,7 @@ describe('App', () => {
   });
 
   it('Should render the tracker componenent', () => {
-    expect(wrapper.containsMatchingElement(<Tracker />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(<Header />)).toEqual(true);
   });
 });
 
