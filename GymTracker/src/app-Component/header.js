@@ -7,7 +7,7 @@ class header extends React.Component {
     }
     render() {
         return (
-            <h1>header.js</h1>
+            <h1>Gym Tracking App</h1>
         )
     }
 }

@@ -7,12 +7,17 @@ class ExerciseTable extends React.Component {
         super(props);
         this.state = {  };
     }
+    hello() {
+        console.log("AddExerciseButton")
+    }
     render() {
+
+        
         return (
             <div>
                 <h1>ExerciseTable.js</h1>
-                <AddExerciseButton />
-                <InputResultsButton />
+                <AddExerciseButton name="Add Exercise.." handleClick={this.hello}/>
+                <InputResultsButton name="Input Results.." handleClick={this.hello} />
             </div>
            
         )
