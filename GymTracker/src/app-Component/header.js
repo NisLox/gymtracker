@@ -9,7 +9,7 @@ class header extends React.Component {
         return (
             <div>
                 <div class="jumbotron">
-                    <h1 class="display-4">GymTracker</h1>
+                    <h1 class="display-4">Gym Tracking App</h1>
                     <p class="lead">By Will Burgess</p>
                 </div>
             </div>
