@@ -7,7 +7,13 @@ class header extends React.Component {
     }
     render() {
         return (
-            <h1>header.js</h1>
+            <div>
+                <div class="jumbotron">
+                    <h1 class="display-4">GymTracker</h1>
+                    <p class="lead">By Will Burgess</p>
+                </div>
+            </div>
+        
         )
     }
 }
