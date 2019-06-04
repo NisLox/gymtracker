@@ -16,7 +16,9 @@ class ExerciseTable extends React.Component {
         
         return (
             <div>
-                 <MyForm />
+                 <MyForm onSubmit={({email, firstName, lastName}) => {
+                     console.log(email, firstName, lastName)
+                 }} />
                 <h1>ExerciseTable.js</h1>
                 <AddExerciseButton name="Add Exercise.." onClick={this.hello}/>
                 <InputResultsButton name="Input Results.." onClick={this.hello} />
