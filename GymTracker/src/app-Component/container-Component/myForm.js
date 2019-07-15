@@ -1,5 +1,4 @@
 import React from 'react';
-import ExerciseTable from './exerciseTable-Component/exerciseTable'
 import { TextField, Button } from '@material-ui/core';
 import {Formik, Form} from 'formik'
 

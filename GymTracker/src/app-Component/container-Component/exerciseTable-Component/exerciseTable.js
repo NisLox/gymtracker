@@ -1,31 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AddExerciseButton from './addExerciseButton'
 import InputResultsButton from './inputResultsButton'
 import MyForm from '../myForm'
+import MyTable from './myTable'
+import { generate } from 'shortid'
 
-class ExerciseTable extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
-    hello() {
-        console.log("AddExerciseButton")
-    }
-    render() {
+const ExerciseTable = () => {
+    const [rows, setRows] = useState([{
+        id: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+    }])
 
+    return (
+        <div>
+                <MyForm onSubmit={(data) => {
+                    setRows(currentRows => [...currentRows, {
+                        id:generate(),
+                    ...data
+                    }])
+                }} />
+            <h1>ExerciseTable.js</h1>
+            <MyTable rows={rows} />
+            
+            
+            <AddExerciseButton name="Add Exercise.." />
+            <InputResultsButton name="Input Results.."/>
+        </div>
         
-        return (
-            <div>
-                 <MyForm onSubmit={({email, firstName, lastName}) => {
-                     console.log(email, firstName, lastName)
-                 }} />
-                <h1>ExerciseTable.js</h1>
-                <AddExerciseButton name="Add Exercise.." onClick={this.hello}/>
-                <InputResultsButton name="Input Results.." onClick={this.hello} />
-            </div>
-           
-        )
-    }
+    )
+
 }
+
 
 export default ExerciseTable;
