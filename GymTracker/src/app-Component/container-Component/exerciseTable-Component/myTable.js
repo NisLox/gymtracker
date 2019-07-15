@@ -14,7 +14,6 @@ export default function SimpleTable({rows}) {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>id</TableCell>
             <TableCell>Exercise</TableCell>
             <TableCell>Set1</TableCell>
             <TableCell>Set2</TableCell>
@@ -25,7 +24,6 @@ export default function SimpleTable({rows}) {
         <TableBody>
           {rows.map(row => (
             <TableRow key={row.id}>
-            <TableCell> {row.id} </TableCell>
               <TableCell >{row.Exercise}</TableCell>
               <TableCell >{row.Set1}</TableCell>
               <TableCell >{row.Set2}</TableCell>

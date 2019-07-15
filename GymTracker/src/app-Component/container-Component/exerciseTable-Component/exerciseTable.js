@@ -23,9 +23,6 @@ const ExerciseTable = () => {
                     }])
                 }} />
             <MyTable rows={rows} />
-            <br />
-            <AddExerciseButton name="Add Exercise.." />
-            <InputResultsButton name="Input Results.."/>
         </div>
         
     )

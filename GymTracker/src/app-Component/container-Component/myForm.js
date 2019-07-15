@@ -61,10 +61,7 @@ class MyForm extends React.Component {
                             </div>
                         
                         <Button type="submit">submit</Button>
-                        <pre>
-                            {JSON.stringify(values, null,2)}
-                        </pre>
-
+                 
                     </Form>
                     )} 
                 </Formik>
