@@ -15,9 +15,10 @@ export default function SimpleTable({rows}) {
         <TableHead>
           <TableRow>
             <TableCell>id</TableCell>
-            <TableCell>First Name</TableCell>
-            <TableCell>Last Name</TableCell>
-            <TableCell>Email</TableCell>
+            <TableCell>Exercise</TableCell>
+            <TableCell>Set1</TableCell>
+            <TableCell>Set2</TableCell>
+            <TableCell>Set3</TableCell>
 
           </TableRow>
         </TableHead>
@@ -25,9 +26,10 @@ export default function SimpleTable({rows}) {
           {rows.map(row => (
             <TableRow key={row.id}>
             <TableCell> {row.id} </TableCell>
-              <TableCell >{row.firstName}</TableCell>
-              <TableCell >{row.lastName}</TableCell>
-              <TableCell >{row.email}</TableCell>
+              <TableCell >{row.Exercise}</TableCell>
+              <TableCell >{row.Set1}</TableCell>
+              <TableCell >{row.Set2}</TableCell>
+              <TableCell >{row.Set3}</TableCell>
             </TableRow>
           ))}
         </TableBody>

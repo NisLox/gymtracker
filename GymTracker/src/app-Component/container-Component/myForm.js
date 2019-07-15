@@ -16,15 +16,15 @@ class MyForm extends React.Component {
         return (
             <div>
                 <h1>MyForm</h1>
-                <Formik initialValues={{firstName:'', lastName: '', email: ''}} onSubmit={values => {this.props.onSubmit(values)
+                <Formik initialValues={{Exercise:'', Set1: '', Set2: '', Set3: ''}} onSubmit={values => {this.props.onSubmit(values)
                 }} >
                     {({values, handleChange, handleBlur}) => (
                         <Form>
                             <div>
                                 <TextField 
-                                placeholder="First name.."
-                                name="firstName" 
-                                value={values.firstName} 
+                                placeholder="Exercise..."
+                                name="Exercise" 
+                                value={values.Exercise} 
                                 onChange={handleChange} 
                                 onBlur={handleBlur}
                                 />
@@ -32,9 +32,9 @@ class MyForm extends React.Component {
                         
                             <div>
                                 <TextField
-                                    placeholder="Last name.."
-                                    name="lastName" 
-                                    value={values.lastName} 
+                                    placeholder="Set1"
+                                    name="Set1" 
+                                    value={values.Set1} 
                                     onChange={handleChange} 
                                     onBlur={handleBlur}
                                 />
@@ -42,9 +42,19 @@ class MyForm extends React.Component {
                             
                             <div>
                                 <TextField 
-                                    placeholder="Email.."
-                                    name="email" 
-                                    value={values.email} 
+                                    placeholder="Set2"
+                                    name="Set2" 
+                                    value={values.Set2} 
+                                    onChange={handleChange} 
+                                    onBlur={handleBlur}
+                                />
+                            </div>
+
+                            <div>
+                                <TextField 
+                                    placeholder="Set3"
+                                    name="Set3" 
+                                    value={values.Set3} 
                                     onChange={handleChange} 
                                     onBlur={handleBlur}
                                 />

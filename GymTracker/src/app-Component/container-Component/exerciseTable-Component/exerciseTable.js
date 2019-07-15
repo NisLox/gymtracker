@@ -8,9 +8,10 @@ import { generate } from 'shortid'
 const ExerciseTable = () => {
     const [rows, setRows] = useState([{
         id: "",
-        firstName: "",
-        lastName: "",
-        email: "",
+        Exercise: "",
+        Set1: "",
+        Set2: "",
+        Set3: "",
     }])
 
     return (
@@ -21,10 +22,8 @@ const ExerciseTable = () => {
                     ...data
                     }])
                 }} />
-            <h1>ExerciseTable.js</h1>
             <MyTable rows={rows} />
-            
-            
+            <br />
             <AddExerciseButton name="Add Exercise.." />
             <InputResultsButton name="Input Results.."/>
         </div>
