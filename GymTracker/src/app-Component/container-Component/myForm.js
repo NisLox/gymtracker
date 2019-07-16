@@ -2,23 +2,17 @@ import React from 'react';
 import { TextField, Button } from '@material-ui/core';
 import {Formik, Form} from 'formik'
 
-class MyForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {  };
-    }
-
-    render() {
-       //https://www.youtube.com/watch?v=6VmVYi9yrAA
-       //https://www.youtube.com/watch?v=pNjeuU4Jwnc
-
-        
-        return (
-            <div>
+const MyForm = ( {onSubmit}) => {
+    return (
+        <div>
                 <h1>MyForm</h1>
-                <Formik initialValues={{Exercise:'', Set1: '', Set2: '', Set3: ''}} onSubmit={values => {this.props.onSubmit(values)
-                }} >
-                    {({values, handleChange, handleBlur}) => (
+                <Formik initialValues={{Exercise:'', Set1: '', Set2: '', Set3: ''}} 
+                onSubmit={(values, {resetForm}) => {
+                    onSubmit(values)
+                    resetForm();
+                }}
+                >
+                    {({values, handleChange, handleBlur,}) => (
                         <Form>
                             <div>
                                 <TextField 
@@ -66,8 +60,8 @@ class MyForm extends React.Component {
                     )} 
                 </Formik>
             </div>  
+              
         )
     }
-}
 
 export default MyForm;

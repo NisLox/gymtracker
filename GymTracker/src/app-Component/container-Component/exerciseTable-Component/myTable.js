@@ -18,9 +18,9 @@ export default function SimpleTable({rows}) {
             <TableCell>Set1</TableCell>
             <TableCell>Set2</TableCell>
             <TableCell>Set3</TableCell>
-
           </TableRow>
         </TableHead>
+        
         <TableBody>
           {rows.map(row => (
             <TableRow key={row.id}>

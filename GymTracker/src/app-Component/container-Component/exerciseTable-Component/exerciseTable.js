@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import AddExerciseButton from './addExerciseButton'
-import InputResultsButton from './inputResultsButton'
+
 import MyForm from '../myForm'
 import MyTable from './myTable'
 import { generate } from 'shortid'
@@ -16,18 +15,19 @@ const ExerciseTable = () => {
 
     return (
         <div>
-                <MyForm onSubmit={(data) => {
-                    setRows(currentRows => [...currentRows, {
+                <MyForm onSubmit={data => {
+                    setRows(currentRows => [
+                        {
                         id:generate(),
-                    ...data
-                    }])
+           
+                            ...data
+                        },
+                        ...currentRows, 
+                    ]);
                 }} />
             <MyTable rows={rows} />
-        </div>
-        
+        </div>   
     )
-
 }
-
 
 export default ExerciseTable;
