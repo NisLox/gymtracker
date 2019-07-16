@@ -9,7 +9,6 @@ class Container extends React.Component {
     render() {
         return (
             <div>
-                <h1>Container</h1>
                 <ExerciseTable />
             </div>  
         )

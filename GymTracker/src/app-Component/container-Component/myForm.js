@@ -5,7 +5,6 @@ import {Formik, Form} from 'formik'
 const MyForm = ( {onSubmit}) => {
     return (
         <div>
-                <h1>MyForm</h1>
                 <Formik initialValues={{Exercise:'', Set1: '', Set2: '', Set3: ''}} 
                 onSubmit={(values, {resetForm}) => {
                     onSubmit(values)
