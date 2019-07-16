@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button, RaisedButton } from '@material-ui/core';
 import {Formik, Form} from 'formik'
 
 const MyForm = ( {onSubmit}) => {
@@ -52,9 +52,8 @@ const MyForm = ( {onSubmit}) => {
                                     onBlur={handleBlur}
                                 />
                             </div>
-                        
-                        <Button type="submit">submit</Button>
-                 
+                        <br />
+                        <Button variant="contained" color="primary" type="submit">submit</Button>
                     </Form>
                     )} 
                 </Formik>
